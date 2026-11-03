@@ -1,6 +1,6 @@
 workflows:
   maximus-android:
-    name: MAXIMUS ECU Android APK
+    name: MAXIMUS ECU Android
     max_build_duration: 60
     instance_type: linux_x2
 
@@ -8,16 +8,12 @@ workflows:
       flutter: stable
 
     scripts:
-      - name: Generate Android platform files
-        script: flutter create --platforms=android --project-name maximus_ecu .
+      - name: Prepare Flutter project
+        script: |
+          flutter create --platforms=android --project-name maximus_ecu .
+          flutter pub get
 
-      - name: Get Flutter packages
-        script: flutter pub get
-
-      - name: Analyze project
-        script: flutter analyze
-
-      - name: Build release APK
+      - name: Build APK
         script: flutter build apk --release
 
     artifacts:

@@ -10,6 +10,7 @@ const blue = Color(0xFF168BFF);
 const bg = Color(0xFF080B12);
 const panel = Color(0xFF111827);
 const muted = Color(0xFF8B98AA);
+const green = Color(0xFF21D07A);
 
 class MaximusApp extends StatelessWidget {
   const MaximusApp({super.key});
@@ -109,7 +110,10 @@ class _MainScreenState extends State<MainScreen> {
             const SizedBox(width: 5),
             const Text(
               'ECU',
-              style: TextStyle(color: red, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: red,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
@@ -232,7 +236,10 @@ class PageLayout extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 5),
-          Text(subtitle, style: const TextStyle(color: muted, fontSize: 11)),
+          Text(
+            subtitle,
+            style: const TextStyle(color: muted, fontSize: 11),
+          ),
           const SizedBox(height: 20),
           child,
         ],
@@ -279,7 +286,10 @@ class DataCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(name, style: const TextStyle(color: muted, fontSize: 11)),
+          Text(
+            name,
+            style: const TextStyle(color: muted, fontSize: 11),
+          ),
           const SizedBox(height: 8),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
@@ -328,7 +338,10 @@ class DashboardPage extends StatelessWidget {
                     Text('SYSTEM STATUS'),
                     Text(
                       '● OFFLINE',
-                      style: TextStyle(color: Colors.orange, fontSize: 11),
+                      style: TextStyle(
+                        color: Colors.orange,
+                        fontSize: 11,
+                      ),
                     ),
                   ],
                 ),
@@ -715,7 +728,10 @@ class _ConnectionItem extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
+                Text(
+                  title,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
                 Text(
                   subtitle,
                   style: const TextStyle(color: muted, fontSize: 10),
